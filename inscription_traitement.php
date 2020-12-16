@@ -4,7 +4,6 @@
  
  if(isset($_POST['nom'])&& isset($_POST['prenom']) && isset($_POST['login']) && isset($_POST['password']) && isset($_POST['password_retype']))
 	{
-//Je bloque totalement, le php m'indique une erreur ici mais je n'ai aucune idée de pourquoi elle est présente dans un premier temps. Tout les tutos que je regarde n'ont pas cette erreur ici.	
 		$nom = htmlspecialchars($_POST ['nom']);
 		$prenom = htmlspecialchars($_POST ['prenom']);
 		$login = htmlspecialchars($_POST ['login']);
@@ -12,6 +11,7 @@
 		$password_retype = htmlspecialchars($_POST ['password_retype']);
 	 
 	 	$check = $bdd->prepare('SELECT prenom, nom, login, password FROM utilisateurs WHERE login = ?');
+		//Je bloque totalement, le php m'indique une erreur ici mais je n'ai aucune idée de pourquoi elle est présente dans un premier temps. Tout les tutos que je regarde n'ont pas cette erreur ici. Je pense que c'est relié a la base de Donnée, le code ne doit pas réussir a s'y connecter (Il m'affiche une erreur a la ligne 14). Désolé de rendre le projet a mi chemin j'ai vraiment beaucoup de mal avec le PHP et là je séche vraiment et mes camarades ne semblent pas pouvoir m'aider.	
 		$check->execute(array($login));
 		$data = $check ->fetch();
 		$row = $check->rowCount();
