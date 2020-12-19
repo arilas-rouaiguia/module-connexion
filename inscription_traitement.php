@@ -40,7 +40,7 @@
 								));
 								header('Location: inscription.php?reg_err=success');
 							}
-						}else header ('Location: inscription.php?reg_err=login');
+						}else header ('Location: inscription.php?reg_err=login'); //L'erreur vient d'ici, quelque chose ne fait pas le lien.
 					}else header ('Location: inscription.php?reg_err=login_lenght');
 				}else header ('Location: inscription.php?reg_err=prenom_lenght');
 			}else header ('Location: inscription.php?reg_err=nom_lenght');
