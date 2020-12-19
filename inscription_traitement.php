@@ -9,9 +9,11 @@
 		$login = htmlspecialchars($_POST ['login']);
 		$password = htmlspecialchars($_POST ['password']);
 		$password_retype = htmlspecialchars($_POST ['password_retype']);
-	 
+		
+	 	$bdd = new PDO('mysql:host=localhost;dbname=moduleconnexion;charset=utf8', 'root', '');
+		
 	 	$check = $bdd->prepare('SELECT prenom, nom, login, password FROM utilisateurs WHERE login = ?');
-		//Je bloque totalement, le php m'indique une erreur ici mais je n'ai aucune idée de pourquoi elle est présente dans un premier temps. Tout les tutos que je regarde n'ont pas cette erreur ici. Je pense que c'est relié a la base de Donnée, le code ne doit pas réussir a s'y connecter (Il m'affiche une erreur a la ligne 14). Désolé de rendre le projet a mi chemin j'ai vraiment beaucoup de mal avec le PHP et là je séche vraiment et mes camarades ne semblent pas pouvoir m'aider.	
+		//Je bloque totalement, le php m'indique aucune erreur, a l'exception que rien ne s'enregistre dans la base de donnée, je ne vois pas mon erreur :/  	
 		$check->execute(array($login));
 		$data = $check ->fetch();
 		$row = $check->rowCount();
@@ -24,7 +26,7 @@
 				{
 					if (strlen($login) <= 100)
 					{	
-							if(filter_var($login, FILTER_VALIDATE_EMAIL))
+							if(filter_var($login, FILTER_VALIDATE_FLOAT))
 						{
 							if($password == $password_retype)
 							{
