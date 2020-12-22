@@ -26,11 +26,11 @@
 				{
 					if (strlen($login) <= 100)
 					{	
-							if(filter_var($login, FILTER_VALIDATE_FLOAT))
+							if(strlen($login) <= 100)
 						{
 							if($password == $password_retype)
 							{
-								$password = hash('sha526', $password);
+								$password = hash('sha526', $password); //L'erreur vient d'ici, quelque chose ne fait pas le lien.
 								$insert = $bdd->prepare('INSERT INTO utilisateurs(login, prenom, nom, password) VALUES(:login, :prenom, :nom, :password)');
 								$insert->execute(array(
 								'nom' => $nom,
@@ -40,7 +40,7 @@
 								));
 								header('Location: inscription.php?reg_err=success');
 							}
-						}else header ('Location: inscription.php?reg_err=login'); //L'erreur vient d'ici, quelque chose ne fait pas le lien.
+						}else header ('Location: inscription.php?reg_err=login'); 
 					}else header ('Location: inscription.php?reg_err=login_lenght');
 				}else header ('Location: inscription.php?reg_err=prenom_lenght');
 			}else header ('Location: inscription.php?reg_err=nom_lenght');
