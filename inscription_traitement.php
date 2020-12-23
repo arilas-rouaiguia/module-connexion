@@ -30,7 +30,7 @@
 						{
 							if($password == $password_retype)
 							{
-								$password = hash('sha526', $password); //L'erreur vient d'ici, quelque chose ne fait pas le lien.
+								$password = ($password); //L'erreur vient d'ici, quelque chose ne fait pas le lien.
 								$insert = $bdd->prepare('INSERT INTO utilisateurs(login, prenom, nom, password) VALUES(:login, :prenom, :nom, :password)');
 								$insert->execute(array(
 								'nom' => $nom,
