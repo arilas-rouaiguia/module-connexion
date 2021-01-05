@@ -12,9 +12,9 @@
 		$data = $check ->fetch();
 		$row = $check->rowCount();
 		
-		//l'erreur doit aussi ce produire ici.
+	
 		
-		if($row == 1)
+		if($row == 1) //l'erreur doit aussi ce produire ici.
 		{
 			if(filter_var($login, FILTER_VALIDATE_EMAIL))
 			{
