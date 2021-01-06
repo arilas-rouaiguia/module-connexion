@@ -14,11 +14,17 @@
 		
 	
 		
-		if($row == 1) //l'erreur doit aussi ce produire ici.
-		{
-			if(filter_var($login, FILTER_VALIDATE_EMAIL))
-			{
-				$password = hash('sha256',$password);
-			}else header('Location:connexion.php?login_err=login');
-		}else header('Location:connexion.php?login_err=already');
-	}else header('Location:connexion.php');
+        if($row == 1)
+        {
+            if(filter_var($login))
+            {
+                $password = hash('sha256', $password);
+                if($data['password'] === $password)
+                {
+                    $_SESSION['id'] = $data['login'];
+                    header('Location: profil.php');
+                    die();
+                }else{ header('Location: index.php?login_err=password'); die(); }
+            }else{ header('Location: index.php?login_err=email'); die(); }
+        }else{ header('Location: index.php?login_err=already'); die(); }
+    }
