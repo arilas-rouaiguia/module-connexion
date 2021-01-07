@@ -7,7 +7,7 @@
 		$login = htmlspecialchars($_POST['login']);
 		$password = htmlspecialchars($_POST['password']);
 		
-		$check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateurs WHERE pseudo = ?');
+		$check = $bdd->prepare('SELECT pseudo, password FROM utilisateurs WHERE pseudo = ?');
 		$check->execute(array($login));
 		$data = $check ->fetch();
 		$row = $check->rowCount();
@@ -22,7 +22,7 @@
                 if($data['password'] === $password)
                 {
                     $_SESSION['id'] = $data['login'];
-                    header('Location: profil.php');
+                    header('Location: changermdp.php');
                     die();
                 }else{ header('Location: index.php?login_err=password'); die(); }
             }else{ header('Location: index.php?login_err=email'); die(); }
