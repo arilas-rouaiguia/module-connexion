@@ -9,12 +9,12 @@
 		
 		$check = $bdd->prepare('SELECT pseudo, password FROM utilisateurs WHERE pseudo = ?');
 		$check->execute(array($login));
-		$data = $check ->fetch();
+		$data = $check->fetch();
 		$row = $check->rowCount();
 		
 	
 		
-        if($row == 1)
+        if($row == 0)
         {
             if(filter_var($login))
             {
