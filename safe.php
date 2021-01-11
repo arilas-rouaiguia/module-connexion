@@ -14,7 +14,7 @@
 		
 	
 		
-        if($row == 0)
+        if($row == 1)
         {
             if(filter_var($login))
             {
