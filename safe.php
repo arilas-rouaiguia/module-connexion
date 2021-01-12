@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_POST['login']) && isset($_POST['password']))
+if(isset($_POST['username']) && isset($_POST['password']))
 {
     // connexion à la base de données
     $db_username = 'root';
@@ -24,17 +24,17 @@ if(isset($_POST['login']) && isset($_POST['password']))
         $count = $reponse['count(*)'];
         if($count!=0) // nom d'utilisateur et mot de passe correctes
         {
-           $_SESSION['username'] = $username;
-           header('Location: principale.php');
+           $_SESSION['login'] = $username;
+           header('Location: profil.php');
         }
         else
         {
-           header('Location: connexion.php?erreur=1'); // utilisateur ou mot de passe incorrect
+           header('Location: login.php?erreur=1'); // utilisateur ou mot de passe incorrect
         }
     }
     else
     {
-       header('Location: connexion.php?erreur=2'); // utilisateur ou mot de passe vide
+       header('Location: login.php?erreur=2'); // utilisateur ou mot de passe vide
     }
 }
 else
@@ -43,4 +43,6 @@ else
 }
 mysqli_close($db); // fermer la connexion
 ?>
-    }
+
+
+
