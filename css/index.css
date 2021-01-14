@@ -1,0 +1,16 @@
+.main_common {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-height: 80vh;
+    background-position-y: 47%;
+    background-position-x: 47%;
+	background-image: url('https://thumbs.gfycat.com/FortunateSnarlingBeauceron-small.gif');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

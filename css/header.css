@@ -1,0 +1,42 @@
+.header_common {
+    background-color: grey;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_navbar {
+    width: 100%;
+}
+
+.ul_navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.li_navbar {
+    list-style-type: none;
+}
+
+.a_navbar {
+    text-decoration: none;
+    color: rgb(102, 38, 38);
+    font-size: 1.5em;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 4px;
+
+
+}
+
+.logo_img {
+    height: 80px;
+    width: 80px;
+}
+
+#logo_hover:hover {
+    /*logo qui sert de nav accueil*/
+    transform: scale(1.2);
+}

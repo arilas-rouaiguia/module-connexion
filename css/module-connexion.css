@@ -1,0 +1,76 @@
+/*body*/
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+/*BALISE COMMUNES*/
+
+@font-face {
+    font-family: 'kenshi_h1';
+    src: url(../fonts/kenshi_h1/Press\ Style\ \ Large.ttf)
+}
+
+.kenshi_h1 {
+    font-size: 4em;
+    letter-spacing: 10px;
+    font-family: 'kenshi_h1';
+}
+
+.section_form {
+    display: flex;
+    flex-direction: column;
+    width: 45vh;
+    height: 95vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(47, 79, 79, 0.8);
+}
+
+.form_edited {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 75%;
+    width: 75%;
+}
+
+.title_form {
+    font-size: 2em;
+    letter-spacing: 5px;
+    font-family: 'kenshi_h1';
+    text-align: center;
+}
+
+.form_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.text[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.password[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+label {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5em;
+
+}

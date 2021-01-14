@@ -1,0 +1,103 @@
+/*FOOTER*/
+.footer_common {
+    background-color: grey;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.article_signature {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+}
+
+.font_signature {
+    /* signature dev */
+    font-family: 'signature';
+    font-size: 20px;
+
+}
+
+.article_link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+/*début bouton personnalisés*/
+.steam_button {
+    background-image: linear-gradient(to right, #16222A 0%, #3A6073 51%, #16222A 100%)
+}
+
+.steam_button {
+    text-decoration: none;
+    margin: 10px;
+    height: 5vh;
+    width: 15vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 2px black;
+    border-radius: 10px;
+}
+
+.steam_button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+
+}
+
+.kenshi_button {
+    background-image: linear-gradient(to right, #616161 0%, #9bc5c3 51%, #616161 100%)
+}
+
+.kenshi_button {
+    text-decoration: none;
+    margin: 10px;
+    height: 5vh;
+    width: 15vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 2px #eee;
+    border-radius: 10px;
+}
+
+.kenshi_button:hover {
+    background-position: right center;
+    color: #fff;
+}
+
+/*end des boutons personnalisés*/
+.deco[type=submit] {
+    padding: 20px 15px;
+    background: rgb(102, 38, 38);
+    border: 0 none;
+    cursor: pointer;
+    border-radius: 1em;
+    color: white;
+}
+
+.coucou {
+    /* bonjour + $login */
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5em;
+}

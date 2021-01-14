@@ -1,0 +1,41 @@
+.main_admin {
+    background-image: url('https://64.media.tumblr.com/8b3388ebda6be1d45d68bb313a383239/tumblr_pzjqnv7QDN1r3uq66o9_500.gifv');
+    /*background*/
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position-y: 25%;
+    background-position-x: left;
+    flex-direction: column;
+    background-size: 100%;
+}
+
+.tableau_admin {
+    border-collapse: collapse;
+    border: 1px black solid;
+    padding: 10px;
+}
+
+table {
+    background-color: rgba(128, 128, 128, 0.4);
+    box-shadow: 2px 2px 2px black;
+}
+
+#right {
+    /*section*/
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    margin-bottom: 1%;
+}
+
+
+#left {
+    /*section*/
+    display: flex;
+    width: 90%;
+    justify-content: start;
+}
